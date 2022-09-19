@@ -1,0 +1,191 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open sans", Arial, Helvetica, sans-serif;
+  background-color: #f7f7fc;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 3rem 0;
+  text-align: center;
+
+  color: #1a0dab;
+}
+
+.container {
+  max-width: 75%;
+  margin-bottom: 4rem;
+}
+
+.error-message {
+  border: 5px solid #d40005;
+  padding: 1rem;
+
+  color: #d40005;
+  font-weight: 600;
+
+  grid-column: 1/-1;
+}
+
+/* navigation */
+.nav {
+  margin: 1rem 3rem;
+
+  background-color: #1a0dab;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Home page */
+
+.meals {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 250px));
+  justify-content: center;
+  gap: 1.5rem;
+  row-gap: 4rem;
+}
+
+.meals a {
+  text-decoration: none;
+  color: #333;
+}
+
+.meal-name {
+  margin-bottom: 1.2rem;
+  color: #d40005;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.meal-img {
+  width: 250px;
+  height: 140px;
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
+/* Details page */
+
+.meal-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 45%));
+
+  justify-content: space-around;
+  margin: 4rem 0;
+}
+
+.meal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meal-description {
+  margin-bottom: 3rem;
+}
+
+.meal-instructions {
+  line-height: 1.6;
+}
+
+/* Contact page */
+
+form {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+}
+
+input {
+  width: 100%;
+  margin-top: 0.1rem;
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+
+button {
+  background: #1a0dab;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 3rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+
+  display: block;
+}
+
+button:disabled {
+  background-color: #333;
+}
+
+label {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.form-error {
+  color: #d40005;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.contact-p {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Loading indicator */
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
+.spinner div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 15px solid rgb(237, 234, 234);
+  border-top-color: #d40005;
+  border-left-color: #d40005;
+
+  animation: spinnerOne 2s infinite;
+}
+
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
